@@ -1,0 +1,19 @@
+<!-- Reemplaza el contenido de index.html después del <head> y antes del <body> -->
+
+<!-- 
+    META TAGS RECOMENDADOS PARA COPIAR EN EL <head>
+    
+    Copia todo el contenido de SEO_METATAGS.html 
+    e insértalo en el <head> de index.html
+    
+    Importante: Actualiza los valores con tu información real
+-->
+
+<!-- Aquí va el contenido de SEO_METATAGS.html -->
+
+<!-- Agregar manifest.json en el <head> -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Agregar Font Awesome icons (ya está en index.html) -->
+
+<!-- Agregar meta viewport (ya está en index.html) -->

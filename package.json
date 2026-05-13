@@ -1,0 +1,29 @@
+{
+  "name": "sitioweb-techpyme",
+  "version": "1.0.0",
+  "description": "Página web para ofrecer servicios de diseño web, desarrollo de software y automatización a PYMEs chilenas",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "start-node": "npx http-server",
+    "dev": "npx http-server --port 8000",
+    "build": "echo 'Static site - no build needed'",
+    "serve": "npx http-server -c-1"
+  },
+  "keywords": [
+    "diseño web",
+    "desarrollo software",
+    "automatización",
+    "PYMEs",
+    "Chile"
+  ],
+  "author": "TechPyme",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuusuario/sitioweb-techpyme.git"
+  }
+}

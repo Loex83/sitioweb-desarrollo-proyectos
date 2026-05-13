@@ -1,0 +1,417 @@
+<!-- 
+    CONFIGURACIÓN DEL FORMULARIO DE CONTACTO
+    
+    Este archivo contiene instrucciones para configurar el formulario
+    para que funcione correctamente y envíe emails reales.
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuración del Formulario - TechPyme</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #0066cc; margin-top: 30px; }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #0066cc;
+        }
+        .opcion { 
+            background-color: #e8f4fd; 
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+        }
+        .paso {
+            background-color: #f0f9ff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Configuración del Formulario de Contacto</h1>
+        
+        <p>Tu página tiene un formulario funcional, pero por defecto no envía emails reales. Aquí te presento 4 opciones para configurarlo:</p>
+
+        <!-- OPCIÓN 1: Formspree -->
+        <div class="opcion">
+            <h2>✅ OPCIÓN 1: Formspree (Recomendado para principiantes)</h2>
+            <p>Formspree es un servicio gratuito que no requiere backend propio.</p>
+
+            <div class="paso">
+                <strong>Paso 1:</strong> Ve a <a href="https://formspree.io/" target="_blank">formspree.io</a> y crea una cuenta
+            </div>
+
+            <div class="paso">
+                <strong>Paso 2:</strong> Crea un nuevo formulario (form)
+            </div>
+
+            <div class="paso">
+                <strong>Paso 3:</strong> Obtén tu ID de formulario. Será algo como: <code>YOUR_FORM_ID</code>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 4:</strong> Abre <code>script.js</code> y busca el comentario sobre Formspree (línea ~70)
+            </div>
+
+            <div class="paso">
+                <strong>Paso 5:</strong> Reemplaza <code>YOUR_FORM_ID</code> por tu ID real y descomenta el código fetch
+            </div>
+
+            <div class="paso">
+                <strong>Paso 6:</strong> En el HTML del formulario, agrega un campo oculto:
+<pre>&lt;input type="hidden" name="_next" value="https://tudominio.com/gracias.html"&gt;</pre>
+            </div>
+
+            <div class="success">
+                ✓ Ventajas: Gratuito, sin servidor necesario, fácil configuración, soporte 24/7
+            </div>
+        </div>
+
+        <!-- OPCIÓN 2: EmailJS -->
+        <div class="opcion">
+            <h2>✅ OPCIÓN 2: EmailJS (Sin servidor, con cliente)</h2>
+            <p>EmailJS permite enviar emails directamente desde el navegador.</p>
+
+            <div class="paso">
+                <strong>Paso 1:</strong> Ve a <a href="https://www.emailjs.com/" target="_blank">emailjs.com</a>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 2:</strong> Crea una cuenta y conecta tu servicio de email (Gmail, Outlook, etc.)
+            </div>
+
+            <div class="paso">
+                <strong>Paso 3:</strong> Obtén tu Service ID, Template ID y Public Key
+            </div>
+
+            <div class="paso">
+                <strong>Paso 4:</strong> Agrega esto a tu <code>index.html</code> en el <code>&lt;head&gt;</code>:
+<pre>&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"&gt;&lt;/script&gt;</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 5:</strong> En <code>script.js</code>, agrega:
+<pre>emailjs.init('TU_PUBLIC_KEY');
+
+document.getElementById('formulario').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const serviceID = 'service_XXXX';
+    const templateID = 'template_XXXX';
+    
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            alert('¡Email enviado exitosamente!');
+            this.reset();
+        })
+        .catch((err) => {
+            alert('Error al enviar email: ' + JSON.stringify(err));
+        });
+});</pre>
+            </div>
+
+            <div class="success">
+                ✓ Ventajas: Gratuito, confiable, muchas opciones de personalización
+            </div>
+        </div>
+
+        <!-- OPCIÓN 3: Backend con Node.js -->
+        <div class="opcion">
+            <h2>✅ OPCIÓN 3: Backend propio con Node.js + Express</h2>
+            <p>Recomendado si quieres control total y máxima seguridad.</p>
+
+            <div class="paso">
+                <strong>Paso 1:</strong> Crea un archivo <code>server.js</code> en tu carpeta:
+<pre>const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+require('dotenv').config();
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static('.'));
+
+// Configura tu transporte de email
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
+
+app.post('/api/contacto', async (req, res) => {
+    try {
+        const { nombre, email, empresa, tipo, mensaje } = req.body;
+        
+        // Validación
+        if (!nombre || !email || !empresa || !tipo || !mensaje) {
+            return res.status(400).json({ error: 'Todos los campos son obligatorios' });
+        }
+        
+        // Email a ti
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_ADMIN,
+            subject: `Nuevo contacto: ${empresa}`,
+            html: `
+                &lt;h2&gt;Nuevo mensaje de contacto&lt;/h2&gt;
+                &lt;p&gt;&lt;strong&gt;Nombre:&lt;/strong&gt; ${nombre}&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; ${email}&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; ${empresa}&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Tipo:&lt;/strong&gt; ${tipo}&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Mensaje:&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;${mensaje}&lt;/p&gt;
+            `
+        };
+        
+        await transporter.sendMail(mailOptions);
+        
+        // Email de confirmación al usuario
+        const confirmationMail = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: 'Hemos recibido tu mensaje - TechPyme',
+            html: `
+                &lt;h2&gt;¡Gracias por contactarnos!&lt;/h2&gt;
+                &lt;p&gt;Hola ${nombre},&lt;/p&gt;
+                &lt;p&gt;Hemos recibido tu mensaje y nos contactaremos contigo pronto.&lt;/p&gt;
+                &lt;p&gt;Saludos,&lt;br&gt;Equipo TechPyme&lt;/p&gt;
+            `
+        };
+        
+        await transporter.sendMail(confirmationMail);
+        
+        res.json({ success: true, message: 'Email enviado correctamente' });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ error: 'Error al enviar email' });
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Servidor escuchando en puerto 3000');
+});</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 2:</strong> Crea un archivo <code>.env</code>:
+<pre>EMAIL_USER=tu-email@gmail.com
+EMAIL_PASS=tu-contraseña-o-token
+EMAIL_ADMIN=tu-email-admin@gmail.com</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 3:</strong> Instala dependencias:
+<pre>npm install express nodemailer cors dotenv</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 4:</strong> Ejecuta el servidor:
+<pre>node server.js</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 5:</strong> En <code>script.js</code>, reemplaza el fetch con:
+<pre>fetch('http://localhost:3000/api/contacto', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        nombre: form.querySelector('input[placeholder="Tu nombre"]').value,
+        email: form.querySelector('input[placeholder="Tu email"]').value,
+        empresa: form.querySelector('input[placeholder="Nombre de tu empresa"]').value,
+        tipo: form.querySelector('select').value,
+        mensaje: form.querySelector('textarea').value
+    })
+})
+.then(response => response.json())
+.then(data => {
+    if (data.success) {
+        alert('¡Mensaje enviado exitosamente!');
+        form.reset();
+    } else {
+        alert('Error: ' + data.error);
+    }
+})
+.catch(error => console.error('Error:', error));</pre>
+            </div>
+
+            <div class="warning">
+                ⚠️ NOTA: Para Gmail, debes usar una contraseña de aplicación especial, no tu contraseña de cuenta
+            </div>
+
+            <div class="success">
+                ✓ Ventajas: Control total, máxima seguridad, sin límites de emails, datos guardados en BD
+            </div>
+        </div>
+
+        <!-- OPCIÓN 4: Netlify Forms -->
+        <div class="opcion">
+            <h2>✅ OPCIÓN 4: Netlify Forms (Si despliegas en Netlify)</h2>
+            <p>Si alojaste tu sitio en Netlify, puedes usar su servicio de formularios.</p>
+
+            <div class="paso">
+                <strong>Paso 1:</strong> En tu formulario HTML, agrega <code>netlify</code>:
+<pre>&lt;form class="contacto-form" netlify&gt;</pre>
+            </div>
+
+            <div class="paso">
+                <strong>Paso 2:</strong> En tu panel de Netlify, ve a Forms y configura notificaciones por email
+            </div>
+
+            <div class="paso">
+                <strong>Paso 3:</strong> ¡Listo! Netlify capturará automáticamente los envíos
+            </div>
+
+            <div class="success">
+                ✓ Ventajas: Super simple, no requiere código backend, integrado con Netlify
+            </div>
+        </div>
+
+        <!-- COMPARACIÓN -->
+        <h2>📊 Comparación de opciones</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background-color: #0066cc; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Opción</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Precio</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Dificultad</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Control</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Recomendado para</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Formspree</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Gratis/Premium</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Muy fácil</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Medio</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Principiantes</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;">EmailJS</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Gratis/Premium</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Fácil</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Medio-Alto</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Sin servidor</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Backend Node.js</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">$5-20/mes</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Intermedia</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Total</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Profesionales</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 10px; border: 1px solid #ddd;">Netlify Forms</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Incluido</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Muy fácil</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Limitado</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Usuarios Netlify</td>
+            </tr>
+        </table>
+
+        <h2>🔒 Checklist de seguridad</h2>
+        <ul>
+            <li>✓ Valida SIEMPRE en el servidor (no solo cliente)</li>
+            <li>✓ Sanitiza todas las entradas del usuario</li>
+            <li>✓ Usa HTTPS en producción (obligatorio)</li>
+            <li>✓ No guardes contraseñas en el código</li>
+            <li>✓ Usa variables de entorno (.env)</li>
+            <li>✓ Implementa rate limiting para prevenir spam</li>
+            <li>✓ Usa CAPTCHA si recibas mucho spam</li>
+        </ul>
+
+        <h2>📧 Agregar CAPTCHA (Google reCAPTCHA)</h2>
+        <p>Para evitar spam, agrega reCAPTCHA:</p>
+
+        <div class="paso">
+            <strong>Paso 1:</strong> Ve a <a href="https://www.google.com/recaptcha/admin" target="_blank">Google reCAPTCHA</a>
+        </div>
+
+        <div class="paso">
+            <strong>Paso 2:</strong> Registra tu sitio y obtén las claves
+        </div>
+
+        <div class="paso">
+            <strong>Paso 3:</strong> Agrega esto a tu formulario HTML:
+<pre>&lt;script src="https://www.google.com/recaptcha/api.js"&gt;&lt;/script&gt;
+&lt;div class="g-recaptcha" data-sitekey="TU_SITE_KEY"&gt;&lt;/div&gt;</pre>
+        </div>
+
+        <div class="paso">
+            <strong>Paso 4:</strong> En tu backend, valida el token:
+<pre>const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${recaptchaToken}`;
+const response = await fetch(verifyUrl, { method: 'POST' });
+const data = await response.json();
+
+if (!data.success || data.score < 0.5) {
+    return res.status(400).json({ error: 'CAPTCHA inválido' });
+}</pre>
+        </div>
+
+        <h2>❓ Preguntas frecuentes</h2>
+        
+        <h3>¿Dónde guardo la información de los contactos?</h3>
+        <p>Con Formspree o Netlify Forms, puedes verla en sus dashboards. Con tu propio backend, puedes guardarla en una base de datos (MongoDB, PostgreSQL, etc.)</p>
+        
+        <h3>¿Cuál es la más segura?</h3>
+        <p>Tu propio backend es la más segura, pero también la más compleja. Para la mayoría de PYMEs, Formspree o EmailJS son suficientes y seguras.</p>
+        
+        <h3>¿Puedo cambiar de opción después?</h3>
+        <p>Sí, solo necesitas cambiar el código JavaScript. Todas son independientes.</p>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid #ddd;">
+        
+        <p style="text-align: center; color: #666;">
+            ¿Necesitas ayuda? Contacta con nuestro equipo técnico para asistencia personalizada.
+        </p>
+    </div>
+</body>
+</html>
