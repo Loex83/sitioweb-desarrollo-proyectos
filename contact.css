@@ -61,6 +61,27 @@
   line-height: 1;
 }
 
+.solution-dashboard-link {
+  margin-top: 24px;
+}
+
+.solution-dashboard-link {
+  width: fit-content;
+  color: #fff;
+  background: #2563eb;
+  border-radius: 13px;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.24);
+}
+
+.solution-dashboard-link:hover {
+  color: #0b1220;
+  transform: translateY(-2px);
+}
+
+.solution-dashboard-link span {
+  font-size: 1rem;
+}
+
 @media (max-width: 600px) {
   .contact-options {
     flex-direction: column;
