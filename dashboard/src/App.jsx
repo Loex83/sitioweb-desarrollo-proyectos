@@ -118,7 +118,7 @@ function App() {
           <button className="icon-button" onClick={() => setDarkMode((value) => !value)} aria-label={darkMode ? 'Activar modo claro' : 'Activar modo oscuro'} title="Cambiar tema">
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <a className="back-link" href="../index.html">Volver al sitio</a>
+          <a className="back-link" href="../../index.html">Volver al sitio</a>
         </div>
       </header>
 
