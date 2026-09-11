@@ -30,9 +30,9 @@ python -m http.server 8000
 
 ## Formulario
 
-El formulario prepara un correo mediante `mailto:` y está configurado para enviar las solicitudes a `arojas.sc1@gmail.com`. Puedes cambiar el valor de `CONFIG.destinationEmail` en `script.js` si es necesario.
+El formulario envía las solicitudes directamente mediante AJAX a `arojas.sc1@gmail.com` usando FormSubmit, sin abrir el cliente de correo del visitante.
 
-Este mecanismo no almacena datos ni necesita backend. Para capturar leads de forma más robusta, migra el formulario a un servicio como Formspree, Netlify Forms o un backend propio.
+FormSubmit puede solicitar una activación inicial del correo destinatario. Para un control más avanzado, puede sustituirse por Formspree, Netlify Forms o un backend propio.
 
 ## Publicación
 

@@ -5,7 +5,7 @@ La landing es un sitio estático y se publica automáticamente en GitHub Pages m
 ## Antes de publicar
 
 1. Abre `script.js`.
-2. El formulario ya está configurado para enviar las solicitudes a `arojas.sc1@gmail.com` mediante `mailto:`.
+2. El formulario ya está configurado para enviar las solicitudes directamente a `arojas.sc1@gmail.com` mediante FormSubmit.
 3. Revisa el contenido y los enlaces de `index.html`.
 4. Comprueba que la URL canonical, `robots.txt` y `sitemap.xml` coincidan con el dominio publicado.
 
@@ -35,4 +35,4 @@ La URL pública configurada actualmente es:
 - Verifica que el formulario abra el cliente de correo con el destinatario correcto.
 - Revisa `robots.txt` y `sitemap.xml` en la URL publicada.
 
-GitHub Pages sirve archivos estáticos. El formulario usa `mailto:` y no almacena datos ni necesita backend. Para capturar leads de forma robusta, será necesario integrar un servicio de formularios o un backend.
+GitHub Pages sirve archivos estáticos. El formulario utiliza FormSubmit para enviar los datos sin backend propio. Para capturar leads con mayor control, será necesario integrar un servicio de formularios dedicado o un backend.

@@ -8,10 +8,11 @@ Estos tres archivos reemplazan la landing actual:
 
 ## Antes de publicar
 
-1. Abre `script.js` si necesitas cambiar el correo de destino. Actualmente está configurado para enviar las solicitudes a `arojas.sc1@gmail.com`.
+1. El formulario está configurado para enviar las solicitudes directamente a `arojas.sc1@gmail.com` mediante FormSubmit.
+2. Si FormSubmit solicita activar el destinatario, confirma el correo desde el mensaje de activación recibido.
 
-2. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.
-3. Reemplaza el texto de "Sobre TechPyme" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
+3. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.
+4. Reemplaza el texto de "Sobre TechPyme" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
 
 ## Publicación en GitHub Pages
 
@@ -21,4 +22,4 @@ La página seguirá funcionando como sitio estático, sin backend.
 
 ## Nota sobre el formulario
 
-La versión entregada usa `mailto:` para que GitHub Pages no necesite servidor. Para una captura de leads más robusta, conviene migrar después a Formspree, Netlify Forms, un webhook o un backend propio.
+La versión entregada usa FormSubmit para enviar los datos sin abrir el cliente de correo. Para un control más avanzado, conviene migrar después a Formspree, Netlify Forms, un webhook o un backend propio.

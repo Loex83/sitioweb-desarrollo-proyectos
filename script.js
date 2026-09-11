@@ -1,5 +1,5 @@
 const CONFIG = {
-  destinationEmail: 'arojas.sc1@gmail.com'
+  formEndpoint: 'https://formsubmit.co/ajax/arojas.sc1@gmail.com'
 };
 
 const navToggle = document.querySelector('.nav-toggle');
@@ -22,34 +22,34 @@ if (navToggle && navMenu) {
 const form = document.querySelector('#diagnostic-form');
 const status = document.querySelector('#form-status');
 
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  if (CONFIG.destinationEmail.includes('REEMPLAZAR')) {
-    status.textContent = 'Configura primero tu email en script.js para activar el envío.';
-    return;
-  }
-
   const data = new FormData(form);
-  const subject = encodeURIComponent(`Solicitud de diagnóstico | ${data.get('company')}`);
-  const body = encodeURIComponent(
-`Hola,
+  data.append('_subject', `Solicitud de diagnóstico | ${data.get('company')}`);
 
-Me interesa conversar sobre una posible mejora/automatización para mi empresa.
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  status.textContent = 'Enviando solicitud...';
 
-Nombre: ${data.get('name')}
-Empresa: ${data.get('company')}
-Email: ${data.get('email')}
-Necesidad: ${data.get('need')}
+  try {
+    const response = await fetch(CONFIG.formEndpoint, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: data
+    });
 
-Situación actual:
-${data.get('message')}
+    if (!response.ok) {
+      throw new Error('No se pudo enviar la solicitud.');
+    }
 
-Saludos`
-  );
-
-  window.location.href = `mailto:${CONFIG.destinationEmail}?subject=${subject}&body=${body}`;
-  status.textContent = 'Se abrirá tu aplicación de correo con la solicitud preparada.';
+    form.reset();
+    status.textContent = 'Solicitud enviada correctamente. Nos pondremos en contacto con usted.';
+  } catch (error) {
+    status.textContent = 'No pudimos enviar la solicitud. Inténtelo nuevamente o contáctenos por WhatsApp.';
+  } finally {
+    submitButton.disabled = false;
+  }
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
