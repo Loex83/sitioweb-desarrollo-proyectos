@@ -1,0 +1,73 @@
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.contact-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.12);
+}
+
+.contact-option strong,
+.contact-option small {
+  display: block;
+}
+
+.contact-option small {
+  margin-top: 1px;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.contact-option-whatsapp {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.contact-option-call {
+  background: #eaf3ff;
+  color: #174ea6;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
+.contact-call-icon {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .contact-options {
+    flex-direction: column;
+  }
+
+  .contact-option {
+    width: 100%;
+    font-size: 1.05rem;
+  }
+}

@@ -14,6 +14,7 @@
   <link rel="canonical" href="https://loex83.github.io/sitioweb-desarrollo-proyectos/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b1220'/%3E%3Cpath d='M24 30h52v12H50v28H38V42H24z' fill='%2360a5fa'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
   <title>TechPyme | Automatización, IA, datos y software</title>
 </head>
 <body>
@@ -196,7 +197,16 @@
           <h2>¿Hay un proceso que está consumiendo demasiado tiempo?</h2>
           <p>Cuéntame qué ocurre hoy. La primera conversación sirve para determinar si existe una oportunidad real de automatización, mejora de datos o desarrollo de software.</p>
           <div class="diagnostic-benefits"><span>✓ Conversación inicial</span><span>✓ Alcance sin compromiso</span><span>✓ Enfoque práctico</span></div>
-          <a class="contact-phone" href="tel:+56981961423">Llamar al +56 9 81961423</a>
+          <div class="contact-options" aria-label="Opciones de contacto">
+            <a class="contact-option contact-option-whatsapp" href="https://wa.me/56981961423" target="_blank" rel="noopener noreferrer">
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.3-6.1-3.5-8.3ZM12.2 21.5h-.1c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.9 1 1-3.8-.2-.3a9.7 9.7 0 0 1-1.5-5.2C2.5 6.4 6.8 2.1 12.1 2.1c2.6 0 5.1 1 6.9 2.9s2.9 4.3 2.9 6.9c0 5.3-4.3 9.6-9.7 9.6Zm5.3-7.2c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.4.9-1.4.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.4Z"/></svg>
+              <span><strong>Contáctanos vía WhatsApp</strong><small>+56 9 81961423</small></span>
+            </a>
+            <a class="contact-option contact-option-call" href="tel:+56981961423">
+              <span class="contact-call-icon" aria-hidden="true">☎</span>
+              <span><strong>O llámanos directamente</strong><small>+56 9 81961423</small></span>
+            </a>
+          </div>
         </div>
         <form id="diagnostic-form" class="diagnostic-form">
           <label>Nombre<input name="name" type="text" placeholder="Tu nombre" required></label>
@@ -205,7 +215,6 @@
           <label>¿Qué quieres mejorar?<select name="need" required><option value="">Selecciona una opción</option><option>Automatizar un proceso</option><option>Implementar IA</option><option>Ordenar y analizar datos</option><option>Conectar sistemas</option><option>Desarrollar software</option><option>No estoy seguro</option></select></label>
           <label>Cuéntame brevemente qué ocurre hoy<textarea name="message" rows="5" placeholder="Por ejemplo: actualmente copiamos información desde correos a Excel y después preparamos un reporte manual..." required></textarea></label>
           <button class="btn btn-primary btn-dark" type="submit">Solicitar diagnóstico <span>→</span></button>
-          <p class="form-note">El formulario prepara un correo para enviar la solicitud. Puedes cambiar el destinatario en <code>script.js</code>.</p>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>

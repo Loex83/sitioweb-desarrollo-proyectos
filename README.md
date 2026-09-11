@@ -6,6 +6,7 @@ Landing estática de TechPyme: automatización, IA aplicada, datos y software pa
 
 - `index.html`: contenido, estructura y metadatos de la página.
 - `style.css`: diseño responsive y estilos visuales.
+- `contact.css`: estilos de las acciones de WhatsApp y llamada.
 - `script.js`: menú móvil, formulario y año del pie de página.
 - `CONFIGURAR.md`: configuración previa a publicar.
 - `GUIA_DESPLIEGUE.md`: publicación en GitHub Pages y otros servicios.
