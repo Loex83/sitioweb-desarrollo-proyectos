@@ -1,5 +1,5 @@
 const CONFIG = {
-  destinationEmail: 'REEMPLAZAR_CON_TU_EMAIL@ejemplo.cl'
+  destinationEmail: 'arojas.sc1@gmail.com'
 };
 
 const navToggle = document.querySelector('.nav-toggle');

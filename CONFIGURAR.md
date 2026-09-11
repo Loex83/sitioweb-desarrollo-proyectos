@@ -8,19 +8,10 @@ Estos tres archivos reemplazan la landing actual:
 
 ## Antes de publicar
 
-1. Abre `script.js`.
-2. Cambia:
+1. Abre `script.js` si necesitas cambiar el correo de destino. Actualmente está configurado para enviar las solicitudes a `arojas.sc1@gmail.com`.
 
-```js
-const CONFIG = {
-  destinationEmail: 'REEMPLAZAR_CON_TU_EMAIL@ejemplo.cl'
-};
-```
-
-por el correo real donde quieres recibir los leads.
-
-3. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.
-4. Reemplaza el texto de "Sobre TechPyme" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
+2. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.
+3. Reemplaza el texto de "Sobre TechPyme" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
 
 ## Publicación en GitHub Pages
 

@@ -29,7 +29,7 @@ python -m http.server 8000
 
 ## Formulario
 
-El formulario prepara un correo mediante `mailto:`. Antes de publicar, abre `script.js` y reemplaza el valor de `CONFIG.destinationEmail` por la dirección que recibirá las solicitudes.
+El formulario prepara un correo mediante `mailto:` y está configurado para enviar las solicitudes a `arojas.sc1@gmail.com`. Puedes cambiar el valor de `CONFIG.destinationEmail` en `script.js` si es necesario.
 
 Este mecanismo no almacena datos ni necesita backend. Para capturar leads de forma más robusta, migra el formulario a un servicio como Formspree, Netlify Forms o un backend propio.
 
