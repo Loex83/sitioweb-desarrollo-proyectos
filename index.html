@@ -1,246 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechPyme - Soluciones Digitales para PYMEs</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automatización, IA, datos y software para pequeñas y medianas empresas en Chile. Identifica procesos repetitivos y conviértelos en sistemas más rápidos y medibles.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="TechPyme">
+  <meta property="og:title" content="TechPyme | Automatización, IA y datos para empresas">
+  <meta property="og:description" content="Automatizamos procesos, conectamos sistemas y convertimos datos en herramientas útiles para el negocio.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://loex83.github.io/sitioweb-desarrollo-proyectos/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b1220'/%3E%3Cpath d='M24 30h52v12H50v28H38V42H24z' fill='%2360a5fa'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <title>TechPyme | Automatización, IA, datos y software</title>
 </head>
 <body>
-    <!-- Navegación -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <i class="fas fa-code"></i>
-                    <span>TechPyme</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#por-que">Por qué nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="TechPyme inicio">
+        <span class="brand-mark">T</span>
+        <span>TechPyme</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#casos">Casos</a>
+        <a href="#como-trabajamos">Cómo trabajamos</a>
+        <a href="#sobre">Sobre TechPyme</a>
+        <a class="nav-cta" href="#diagnostico">Solicitar diagnóstico</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main>
     <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transforma tu negocio digitalmente</h1>
-                <p>Soluciones web, software y automatización diseñadas especialmente para PYMEs chilenas</p>
-                <a href="#contacto" class="btn btn-primary">Comienza ahora</a>
-            </div>
-            <div class="hero-image">
-                <div class="hero-illustration">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> Tecnología aplicada al negocio</div>
+          <h1>Automatiza procesos.<br><span>Reduce trabajo manual.</span></h1>
+          <p class="hero-lead">Desarrollo soluciones de <strong>automatización, IA, datos y software</strong> para empresas que necesitan trabajar mejor sin aumentar innecesariamente su carga operativa.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#diagnostico">Solicitar diagnóstico <span>→</span></a>
+            <a class="btn btn-secondary" href="#casos">Ver ejemplos</a>
+          </div>
+          <div class="hero-note">Primera conversación orientada a identificar oportunidades concretas. Sin compromiso.</div>
         </div>
+        <div class="hero-visual" aria-label="Esquema visual de automatización">
+          <div class="system-card">
+            <div class="system-top">
+              <span class="status"><span class="status-dot"></span> Flujo automatizado</span>
+              <span class="mini-chip">IA + Datos</span>
+            </div>
+            <div class="flow">
+              <div class="flow-node"><span>01</span><strong>Entrada</strong><small>Formulario · correo · Excel</small></div>
+              <div class="flow-line"></div>
+              <div class="flow-node active"><span>02</span><strong>Procesamiento</strong><small>Reglas · APIs · IA</small></div>
+              <div class="flow-line"></div>
+              <div class="flow-node"><span>03</span><strong>Resultado</strong><small>CRM · reporte · acción</small></div>
+            </div>
+            <div class="system-footer"><span>Ahorro potencial</span><strong>menos tareas repetitivas</strong></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="servicios" id="servicios">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <p class="section-subtitle">Soluciones completas para tu presencia digital</p>
-            
-            <div class="services-grid">
-                <!-- Servicio 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Diseño de Sitios Web</h3>
-                    <p>Sitios web modernos, responsivos y optimizados para convertir visitantes en clientes. Diseño atractivo que refleja tu marca.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Diseño responsivo</li>
-                        <li><i class="fas fa-check"></i> SEO optimizado</li>
-                        <li><i class="fas fa-check"></i> Rápido y seguro</li>
-                    </ul>
-                </div>
-
-                <!-- Servicio 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Desarrollo de Software</h3>
-                    <p>Aplicaciones personalizadas que resuelven tus necesidades específicas. Desde apps web hasta soluciones a medida.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Aplicaciones web</li>
-                        <li><i class="fas fa-check"></i> Apps móviles</li>
-                        <li><i class="fas fa-check"></i> Integraciones</li>
-                    </ul>
-                </div>
-
-                <!-- Servicio 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Automatizaciones</h3>
-                    <p>Automatiza procesos repetitivos y ahorra tiempo. Integración de sistemas y flujos de trabajo eficientes.</p>
-                    <ul class="features">
-                        <li><i class="fas fa-check"></i> Flujos de trabajo</li>
-                        <li><i class="fas fa-check"></i> Integraciones API</li>
-                        <li><i class="fas fa-check"></i> Reportes automatizados</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section class="trust-strip">
+      <div class="container trust-inner">
+        <span>Especialización</span>
+        <div><b>Automatización</b><i>•</i><b>IA aplicada</b><i>•</i><b>Datos</b><i>•</i><b>Software</b></div>
+      </div>
     </section>
 
-    <!-- Por qué nosotros -->
-    <section class="por-que" id="por-que">
-        <div class="container">
-            <h2>¿Por qué elegirnos?</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-number">01</div>
-                    <h3>Especialistas en PYMEs</h3>
-                    <p>Entendemos los desafíos específicos de pequeñas y medianas empresas</p>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-number">02</div>
-                    <h3>Presupuestos Justos</h3>
-                    <p>Soluciones de calidad con precios accesibles para tu negocio</p>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-number">03</div>
-                    <h3>Soporte Continuo</h3>
-                    <p>Mantenimiento y asistencia técnica para tu tranquilidad</p>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-number">04</div>
-                    <h3>Tecnología Moderna</h3>
-                    <p>Usamos las mejores herramientas y lenguajes actuales</p>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-number">05</div>
-                    <h3>Resultados Medibles</h3>
-                    <p>Enfoque basado en datos y resultados concretos</p>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-number">06</div>
-                    <h3>Basados en Chile</h3>
-                    <p>Atención local en zona horaria chilena sin intermediarios</p>
-                </div>
-            </div>
+    <section class="section problem-section">
+      <div class="container two-col">
+        <div>
+          <p class="section-kicker">El problema</p>
+          <h2>Muchas empresas ya tienen tecnología. Lo que falta es conectarla.</h2>
         </div>
+        <div class="problem-copy">
+          <p>El trabajo manual aparece cuando la información queda repartida entre correos, planillas, formularios, documentos, CRM y otras herramientas.</p>
+          <p>Mi objetivo es convertir ese trabajo repetitivo en <strong>procesos simples, integrados y medibles</strong>.</p>
+        </div>
+      </div>
+      <div class="container pain-grid">
+        <article class="pain-card"><span>01</span><h3>Copiar y pegar</h3><p>La misma información termina ingresándose varias veces en distintos sistemas.</p></article>
+        <article class="pain-card"><span>02</span><h3>Reportes manuales</h3><p>Horas preparando información que debería estar disponible automáticamente.</p></article>
+        <article class="pain-card"><span>03</span><h3>Procesar documentos</h3><p>Correos, PDFs y archivos que requieren revisión, clasificación o extracción.</p></article>
+        <article class="pain-card"><span>04</span><h3>Seguimiento comercial</h3><p>Leads y solicitudes que reciben un seguimiento irregular o demasiado tardío.</p></article>
+      </div>
     </section>
 
-    <!-- Estadísticas -->
-    <section class="stats">
-        <div class="container">
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <p>Proyectos completados</p>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">40+</div>
-                <p>Clientes satisfechos</p>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">8+</div>
-                <p>Años de experiencia</p>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <p>Soporte disponible</p>
-            </div>
+    <section class="section dark-section" id="soluciones">
+      <div class="container">
+        <div class="section-head light-head">
+          <div><p class="section-kicker">Soluciones</p><h2>Lo que puedo construir para tu empresa</h2></div>
+          <p>La tecnología se adapta al proceso. No al revés.</p>
         </div>
+        <div class="solution-grid">
+          <article class="solution-card featured">
+            <div class="icon-box">↗</div>
+            <p class="card-label">01 · Mayor prioridad</p>
+            <h3>Automatización de procesos</h3>
+            <p>Diseño flujos que conectan formularios, correos, hojas de cálculo, bases de datos, APIs y sistemas internos.</p>
+            <ul><li>Flujos administrativos</li><li>Integraciones API</li><li>Reportes automáticos</li><li>Notificaciones y seguimiento</li></ul>
+          </article>
+          <article class="solution-card">
+            <div class="icon-box">✦</div>
+            <p class="card-label">02</p>
+            <h3>IA aplicada al negocio</h3>
+            <p>Incorporo IA donde tiene un beneficio concreto: documentos, atención, búsqueda, clasificación o análisis.</p>
+            <ul><li>Asistentes internos</li><li>Procesamiento documental</li><li>Clasificación y extracción</li><li>Automatizaciones con IA</li></ul>
+          </article>
+          <article class="solution-card">
+            <div class="icon-box">⌁</div>
+            <p class="card-label">03</p>
+            <h3>Datos y dashboards</h3>
+            <p>Consolido información dispersa y la convierto en indicadores para tomar decisiones con menos trabajo manual.</p>
+            <ul><li>Dashboards</li><li>Integración de fuentes</li><li>KPIs y alertas</li><li>Reportes automatizados</li></ul>
+          </article>
+          <article class="solution-card">
+            <div class="icon-box">□</div>
+            <p class="card-label">04</p>
+            <h3>Software a medida</h3>
+            <p>Cuando una herramienta estándar no alcanza, desarrollo aplicaciones y componentes específicos para el proceso.</p>
+            <ul><li>Aplicaciones web</li><li>APIs</li><li>Herramientas internas</li><li>Integraciones</li></ul>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Formulario de Contacto -->
-    <section class="contacto" id="contacto">
-        <div class="container">
-            <h2>Cuéntanos sobre tu proyecto</h2>
-            <p class="section-subtitle">Nos gustaría saber más de ti y cómo podemos ayudarte</p>
-
-            <div class="contacto-content">
-                <div class="contacto-info">
-                    <h3>Información de contacto</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Ubicación</strong>
-                            <p>Santiago, Chile</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Teléfono</strong>
-                            <p>+56 9 XXXX XXXX</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p>contacto@techpyme.cl</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <form class="contacto-form" id="formulario">
-                    <div class="form-group">
-                        <input type="text" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Tu email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Nombre de tu empresa" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Tipo de proyecto</option>
-                            <option value="sitio-web">Diseño de sitio web</option>
-                            <option value="app-web">App web</option>
-                            <option value="app-movil">App móvil</option>
-                            <option value="automatizacion">Automatización</option>
-                            <option value="consultoria">Consultoría</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-                </form>
-            </div>
+    <section class="section" id="casos">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="section-kicker">Casos demostrativos</p><h2>Así podría verse una solución</h2></div>
+          <p>Estos ejemplos son demostraciones técnicas para mostrar el tipo de problema que puedo abordar. No corresponden a clientes publicados.</p>
         </div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-number">01</div>
+            <div class="case-body"><p class="case-type">Automatización</p><h3>De solicitud a cotización</h3><p>Un formulario recibe la solicitud, procesa los datos, genera una cotización, registra el caso y dispara el seguimiento.</p><div class="case-flow"><span>Formulario</span><b>→</b><span>IA / reglas</span><b>→</b><span>Cotización</span><b>→</b><span>Seguimiento</span></div></div>
+          </article>
+          <article class="case-card">
+            <div class="case-number">02</div>
+            <div class="case-body"><p class="case-type">Datos</p><h3>De Excel disperso a dashboard</h3><p>Consolidación de fuentes, limpieza, KPIs y visualización para que la información esté disponible sin preparar el reporte manualmente.</p><div class="case-flow"><span>Fuentes</span><b>→</b><span>ETL</span><b>→</b><span>KPIs</span><b>→</b><span>Dashboard</span></div></div>
+          </article>
+          <article class="case-card">
+            <div class="case-number">03</div>
+            <div class="case-body"><p class="case-type">IA aplicada</p><h3>Consultar documentos con IA</h3><p>Un asistente consulta una base documental para responder preguntas y reducir el tiempo dedicado a buscar información.</p><div class="case-flow"><span>PDFs</span><b>→</b><span>Base de conocimiento</span><b>→</b><span>Asistente</span></div></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 TechPyme. Todos los derechos reservados.</p>
-            <p>Soluciones digitales para PYMEs chilenas</p>
-        </div>
-    </footer>
+    <section class="section fit-section">
+      <div class="container">
+        <div class="section-head"><div><p class="section-kicker">Ideal para</p><h2>Empresas donde la información y el trabajo manual están frenando el crecimiento</h2></div></div>
+        <div class="tag-grid"><span>Servicios profesionales</span><span>Ingeniería y construcción</span><span>Inmobiliarias</span><span>Distribución y operaciones</span><span>E-commerce</span><span>Empresas de servicios</span></div>
+        <p class="fit-note">No necesitas saber exactamente qué tecnología necesitas. Basta con identificar un proceso que hoy consuma demasiado tiempo.</p>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section process-section" id="como-trabajamos">
+      <div class="container">
+        <div class="section-head light-head"><div><p class="section-kicker">Proceso</p><h2>Empezamos por el problema, no por la tecnología</h2></div></div>
+        <div class="process-grid">
+          <article><span>01</span><h3>Diagnóstico</h3><p>Entendemos el proceso actual, dónde se pierde tiempo y qué información interviene.</p></article>
+          <article><span>02</span><h3>Diseño</h3><p>Definimos una solución simple, con alcance claro y una primera versión útil.</p></article>
+          <article><span>03</span><h3>Implementación</h3><p>Construimos, integramos, probamos y dejamos el flujo operativo.</p></article>
+          <article><span>04</span><h3>Mejora</h3><p>Medimos el uso, corregimos fricciones y evaluamos nuevas automatizaciones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-avatar">T</div>
+        <div>
+          <p class="section-kicker">Sobre TechPyme</p>
+          <h2>Especialización técnica sin la burocracia de una gran consultora.</h2>
+          <p>TechPyme nace para ayudar a pequeñas y medianas empresas a aprovechar software, datos y automatización sin embarcarse en proyectos tecnológicos innecesariamente complejos.</p>
+          <p>El enfoque es directo: entender el proceso, construir lo que realmente aporta valor y dejar una solución que pueda mantenerse y evolucionar.</p>
+          <div class="about-points"><span>✓ Trato directo</span><span>✓ Desarrollo a medida</span><span>✓ Enfoque en resultados</span><span>✓ Trabajo remoto y local para Chile</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="diagnostic" id="diagnostico">
+      <div class="container diagnostic-grid">
+        <div>
+          <p class="section-kicker">Primer paso</p>
+          <h2>¿Hay un proceso que está consumiendo demasiado tiempo?</h2>
+          <p>Cuéntame qué ocurre hoy. La primera conversación sirve para determinar si existe una oportunidad real de automatización, mejora de datos o desarrollo de software.</p>
+          <div class="diagnostic-benefits"><span>✓ Conversación inicial</span><span>✓ Alcance sin compromiso</span><span>✓ Enfoque práctico</span></div>
+        </div>
+        <form id="diagnostic-form" class="diagnostic-form">
+          <label>Nombre<input name="name" type="text" placeholder="Tu nombre" required></label>
+          <label>Email<input name="email" type="email" placeholder="tu@empresa.cl" required></label>
+          <label>Empresa<input name="company" type="text" placeholder="Nombre de tu empresa" required></label>
+          <label>¿Qué quieres mejorar?<select name="need" required><option value="">Selecciona una opción</option><option>Automatizar un proceso</option><option>Implementar IA</option><option>Ordenar y analizar datos</option><option>Conectar sistemas</option><option>Desarrollar software</option><option>No estoy seguro</option></select></label>
+          <label>Cuéntame brevemente qué ocurre hoy<textarea name="message" rows="5" placeholder="Por ejemplo: actualmente copiamos información desde correos a Excel y después preparamos un reporte manual..." required></textarea></label>
+          <button class="btn btn-primary btn-dark" type="submit">Solicitar diagnóstico <span>→</span></button>
+          <p class="form-note">El formulario prepara un correo para enviar la solicitud. Puedes cambiar el destinatario en <code>script.js</code>.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#inicio"><span class="brand-mark">T</span><span>TechPyme</span></a><p>Automatización, IA, datos y software para empresas.</p></div>
+      <div class="footer-links"><a href="#soluciones">Soluciones</a><a href="#casos">Casos</a><a href="#diagnostico">Diagnóstico</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> TechPyme</span><span>Santiago, Chile</span></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
