@@ -24,6 +24,8 @@ npm-debug.log*
 # Compilados
 dist/
 build/
+!dashboard/dist/
+!dashboard/dist/**
 
 # Variables de entorno
 .env

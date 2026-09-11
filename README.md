@@ -45,6 +45,6 @@ La URL configurada actualmente en los metadatos es:
 
 El dashboard está disponible en:
 
-`https://loex83.github.io/sitioweb-desarrollo-proyectos/dashboard/`
+`https://loex83.github.io/sitioweb-desarrollo-proyectos/dashboard/dist/`
 
 Si cambia el repositorio o el dominio, actualiza también el enlace canonical de `index.html`, además de `robots.txt` y `sitemap.xml`.
