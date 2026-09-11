@@ -18,6 +18,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build commercial dashboard
+        working-directory: dashboard
+        run: npm install && npm run build
+
+      - name: Prepare dashboard for Pages
+        shell: pwsh
+        run: Copy-Item -Path dashboard/dist/* -Destination dashboard -Recurse -Force
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-artifact@v4
         with:

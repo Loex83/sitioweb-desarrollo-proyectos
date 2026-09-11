@@ -11,6 +11,7 @@ Landing estática de TechPyme: automatización, IA aplicada, datos y software pa
 - `CONFIGURAR.md`: configuración previa a publicar.
 - `GUIA_DESPLIEGUE.md`: publicación en GitHub Pages y otros servicios.
 - `robots.txt` y `sitemap.xml`: rastreo e indexación del sitio publicado.
+- `dashboard/`: dashboard comercial React con datos demostrativos de ventas en Chile.
 
 ## Uso local
 
@@ -41,5 +42,9 @@ El workflow de `.github/workflows/github-pages.yml` publica automáticamente la 
 La URL configurada actualmente en los metadatos es:
 
 `https://loex83.github.io/sitioweb-desarrollo-proyectos/`
+
+El dashboard está disponible en:
+
+`https://loex83.github.io/sitioweb-desarrollo-proyectos/dashboard/`
 
 Si cambia el repositorio o el dominio, actualiza también el enlace canonical de `index.html`, además de `robots.txt` y `sitemap.xml`.
