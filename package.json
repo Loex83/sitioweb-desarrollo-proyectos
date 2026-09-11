@@ -1,7 +1,7 @@
 {
   "name": "sitioweb-techpyme",
   "version": "1.0.0",
-  "description": "Página web para ofrecer servicios de diseño web, desarrollo de software y automatización a PYMEs chilenas",
+  "description": "Landing de TechPyme para ofrecer automatización, IA aplicada, datos y software a empresas chilenas",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
@@ -11,10 +11,10 @@
     "serve": "npx http-server -c-1"
   },
   "keywords": [
-    "diseño web",
-    "desarrollo software",
     "automatización",
-    "PYMEs",
+    "IA aplicada",
+    "datos",
+    "software",
     "Chile"
   ],
   "author": "TechPyme",
@@ -24,6 +24,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tuusuario/sitioweb-techpyme.git"
+    "url": "https://github.com/loex83/sitioweb-desarrollo-proyectos.git"
   }
 }
