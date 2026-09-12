@@ -12,6 +12,7 @@ Landing estática de TechPyme: automatización, IA aplicada, datos y software pa
 - `GUIA_DESPLIEGUE.md`: publicación en GitHub Pages y otros servicios.
 - `robots.txt` y `sitemap.xml`: rastreo e indexación del sitio publicado.
 - `dashboard/`: dashboard comercial React con datos demostrativos de ventas en Chile.
+- `cotizador/`: cotizador comercial B2B React con servicios tecnológicos demostrativos.
 
 ## Uso local
 
@@ -46,5 +47,9 @@ La URL configurada actualmente en los metadatos es:
 El dashboard está disponible en:
 
 `https://loex83.github.io/sitioweb-desarrollo-proyectos/dashboard/dist/`
+
+El cotizador comercial está disponible en:
+
+`https://loex83.github.io/sitioweb-desarrollo-proyectos/cotizador/dist/`
 
 Si cambia el repositorio o el dominio, actualiza también el enlace canonical de `index.html`, además de `robots.txt` y `sitemap.xml`.

@@ -31,6 +31,14 @@ jobs:
         shell: pwsh
         run: Copy-Item -Path dashboard/dist/* -Destination dashboard -Recurse -Force
 
+      - name: Build B2B quote calculator
+        working-directory: cotizador
+        run: npm install && npm run build
+
+      - name: Prepare quote calculator for Pages
+        shell: pwsh
+        run: Copy-Item -Path cotizador/dist/* -Destination cotizador -Recurse -Force
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-artifact@v4
         with:

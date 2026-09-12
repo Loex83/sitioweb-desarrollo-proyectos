@@ -26,6 +26,8 @@ dist/
 build/
 !dashboard/dist/
 !dashboard/dist/**
+!cotizador/dist/
+!cotizador/dist/**
 
 # Variables de entorno
 .env
