@@ -62,7 +62,7 @@ function App() {
 
   const shareWhatsApp = () => {
     const detail = items.map((item) => `• ${item.name} x${item.quantity}: ${formatCurrency(item.price * item.quantity)}`).join('\n');
-    const message = `Hola, quisiera revisar esta cotización TechPyme (${quoteNumber}).\n\n${detail}\n\nTotal estimado: ${formatCurrency(total)}\nEmpresa: ${company.name || 'Por completar'}`;
+    const message = `Hola, quisiera revisar esta cotización kibotics (${quoteNumber}).\n\n${detail}\n\nTotal estimado: ${formatCurrency(total)}\nEmpresa: ${company.name || 'Por completar'}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   };
 
@@ -75,7 +75,7 @@ function App() {
     <div className="quote-app">
       <header className="quote-header">
         <a className="back-home" href="../../index.html"><ArrowLeft size={16} /> Volver al sitio</a>
-        <div className="quote-brand"><span className="brand-symbol">T</span><span>TechPyme <small>cotizador comercial</small></span></div>
+        <div className="quote-brand"><span className="brand-symbol">K</span><span>kibotics <small>cotizador comercial</small></span></div>
         <div className="quote-number"><span>Cotización</span><strong>{quoteNumber}</strong></div>
       </header>
 
@@ -103,7 +103,7 @@ function App() {
             <div className="summary-actions"><button className="primary-action" onClick={requestQuote} disabled={items.length === 0}><Send size={16} /> Preparar cotización</button><div className="secondary-actions"><button onClick={() => window.print()} disabled={items.length === 0}><Printer size={15} /> Imprimir</button><button onClick={shareWhatsApp} disabled={items.length === 0}><Send size={15} /> WhatsApp</button></div>{sent && <p className="success-message"><Check size={15} /> Cotización preparada. Puede imprimirla o compartirla.</p>}</div>
           </aside>
         </div>
-        <footer className="quote-footer"><span>TechPyme · Cotizador comercial B2B</span><span><WalletCards size={14} /> Valores demostrativos, sujetos a validación comercial</span></footer>
+        <footer className="quote-footer"><span>kibotics · Cotizador comercial B2B</span><span><WalletCards size={14} /> Valores demostrativos, sujetos a validación comercial</span></footer>
       </main>
     </div>
   );

@@ -1,7 +1,7 @@
 {
-  "name": "sitioweb-techpyme",
+  "name": "sitioweb-kibotics",
   "version": "1.0.0",
-  "description": "Landing de TechPyme para ofrecer automatización, IA aplicada, datos y software a empresas chilenas",
+  "description": "Landing de kibotics para ofrecer automatización, IA aplicada, datos y software a empresas chilenas",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
@@ -17,7 +17,7 @@
     "software",
     "Chile"
   ],
-  "author": "TechPyme",
+  "author": "kibotics",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.0"

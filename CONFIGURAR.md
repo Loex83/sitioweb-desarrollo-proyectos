@@ -1,4 +1,4 @@
-# TechPyme — renovación comercial
+# kibotics — renovación comercial
 
 Estos tres archivos reemplazan la landing actual:
 
@@ -12,7 +12,7 @@ Estos tres archivos reemplazan la landing actual:
 2. Si FormSubmit solicita activar el destinatario, confirma el correo desde el mensaje de activación recibido.
 
 3. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.
-4. Reemplaza el texto de "Sobre TechPyme" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
+4. Reemplaza el texto de "Sobre kibotics" por tu presentación personal real cuando quieras incorporar tu nombre y experiencia.
 
 ## Publicación en GitHub Pages
 

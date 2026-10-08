@@ -111,7 +111,7 @@ function App() {
       <header className="dashboard-header">
         <div className="brand-lockup">
           <div className="app-mark"><LayoutDashboard size={19} /></div>
-          <div><p className="overline">TechPyme / Analytics</p><h1>Dashboard comercial</h1></div>
+          <div><p className="overline">kibotics / Analytics</p><h1>Dashboard comercial</h1></div>
         </div>
         <div className="header-actions">
           <span className="demo-badge"><span /> Datos demostrativos</span>
@@ -161,7 +161,7 @@ function App() {
             {selectedSale ? <><div className="card-header"><div><p className="overline">Detalle de operación</p><h3>{selectedSale.id}</h3></div><button className="close-detail" onClick={() => setSelectedSale(null)} aria-label="Cerrar detalle">×</button></div><div className="detail-amount"><span>Venta bruta</span><strong>{formatCurrency(selectedSale.revenue)}</strong><small>{selectedSale.units} unidades · {selectedSale.status}</small></div><dl className="detail-list"><div><dt>Servicio / producto</dt><dd>{selectedSale.item}</dd></div><div><dt>Ubicación</dt><dd>{selectedSale.commune}, {selectedSale.region}</dd></div><div><dt>Canal</dt><dd>{selectedSale.channel}</dd></div><div><dt>Margen estimado</dt><dd>{formatCurrency(selectedSale.revenue - selectedSale.cost)}</dd></div></dl></> : <div className="empty-insight"><div className="empty-icon"><MapPin size={19} /></div><h3>Explore una operación</h3><p>Seleccione una fila de la tabla para revisar su detalle comercial.</p></div>}
           </aside>
         </section>
-        <footer className="dashboard-footer"><span>TechPyme Analytics · versión demostrativa</span><span>Actualizado con dataset local de referencia · CLP</span></footer>
+        <footer className="dashboard-footer"><span>kibotics Analytics · versión demostrativa</span><span>Actualizado con dataset local de referencia · CLP</span></footer>
       </main>
     </div>
   );
@@ -186,7 +186,7 @@ function exportCsv(rows) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'techpyme-ventas.csv';
+  link.download = 'kibotics-ventas.csv';
   link.click();
   URL.revokeObjectURL(url);
 }

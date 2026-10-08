@@ -1,6 +1,6 @@
-# TechPyme
+# kibotics
 
-Landing estática de TechPyme: automatización, IA aplicada, datos y software para pequeñas y medianas empresas en Chile.
+Landing estática de kibotics: automatización, IA aplicada, datos y software para pequeñas y medianas empresas en Chile.
 
 ## Archivos principales
 
@@ -40,16 +40,16 @@ FormSubmit puede solicitar una activación inicial del correo destinatario. Para
 
 El workflow de `.github/workflows/github-pages.yml` publica automáticamente la raíz del repositorio en GitHub Pages cada vez que se actualiza `main` o `master`.
 
-La URL configurada actualmente en los metadatos es:
+El dominio principal configurado es:
 
-`https://loex83.github.io/sitioweb-desarrollo-proyectos/`
+`https://kibotics.cl/`
 
 El dashboard está disponible en:
 
-`https://loex83.github.io/sitioweb-desarrollo-proyectos/dashboard/dist/`
+`https://kibotics.cl/dashboard/dist/`
 
 El cotizador comercial está disponible en:
 
-`https://loex83.github.io/sitioweb-desarrollo-proyectos/cotizador/dist/`
+`https://kibotics.cl/cotizador/dist/`
 
 Si cambia el repositorio o el dominio, actualiza también el enlace canonical de `index.html`, además de `robots.txt` y `sitemap.xml`.

@@ -1,4 +1,4 @@
-# Guía de despliegue - TechPyme
+# Guía de despliegue - kibotics
 
 La landing es un sitio estático y se publica automáticamente en GitHub Pages mediante `.github/workflows/github-pages.yml`.
 
@@ -7,7 +7,7 @@ La landing es un sitio estático y se publica automáticamente en GitHub Pages m
 1. Abre `script.js`.
 2. El formulario ya está configurado para enviar las solicitudes directamente a `arojas.sc1@gmail.com` mediante FormSubmit.
 3. Revisa el contenido y los enlaces de `index.html`.
-4. Comprueba que la URL canonical, `robots.txt` y `sitemap.xml` coincidan con el dominio publicado.
+4. Comprueba que la URL canonical, `robots.txt` y `sitemap.xml` coincidan con el dominio publicado (`kibotics.cl`).
 
 ## Publicar en GitHub Pages
 
@@ -16,17 +16,18 @@ Si el repositorio aún no existe en GitHub:
 ```bash
 git init
 git add .
-git commit -m "Publica sitio web TechPyme"
+git commit -m "Publica sitio web kibotics"
 git branch -M main
 git remote add origin https://github.com/loex83/sitioweb-desarrollo-proyectos.git
 git push -u origin main
 ```
 
 En GitHub, abre **Settings > Pages** y selecciona **GitHub Actions** como fuente de publicación. El workflow se ejecuta en cada push a `main` o `master`.
+Para el dominio personalizado, configura `kibotics.cl` en **Custom domain** (el archivo `CNAME` ya se encuentra incluido en el proyecto).
 
-La URL pública configurada actualmente es:
+El dominio público configurado es:
 
-`https://loex83.github.io/sitioweb-desarrollo-proyectos/`
+`https://kibotics.cl/`
 
 ## Verificación
 

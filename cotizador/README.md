@@ -1,4 +1,4 @@
-# Cotizador comercial B2B TechPyme
+# Cotizador comercial B2B kibotics
 
 Aplicación demostrativa para cotizar productos y servicios tecnológicos en pesos chilenos.
 

@@ -1,4 +1,4 @@
-# Dashboard comercial TechPyme
+# Dashboard comercial kibotics
 
 Dashboard demostrativo construido con React, Vite y ECharts. Presenta ventas sintéticas en pesos chilenos, distribuidas por región, categoría y canal.
 
