@@ -8,7 +8,7 @@ Estos tres archivos reemplazan la landing actual:
 
 ## Antes de publicar
 
-1. El formulario está configurado para enviar las solicitudes directamente a `arojas.sc1@gmail.com` mediante FormSubmit.
+1. El formulario está configurado para enviar las solicitudes directamente a `andres.rojas@kibotics.cl` mediante FormSubmit.
 2. Si FormSubmit solicita activar el destinatario, confirma el correo desde el mensaje de activación recibido.
 
 3. Reemplaza en `index.html` cualquier enlace social cuando tengas las URL definitivas.

@@ -1,5 +1,5 @@
 const CONFIG = {
-  formEndpoint: 'https://formsubmit.co/ajax/arojas.sc1@gmail.com'
+  formEndpoint: 'https://formsubmit.co/ajax/andres.rojas@kibotics.cl'
 };
 
 const navToggle = document.querySelector('.nav-toggle');

@@ -5,7 +5,7 @@ La landing es un sitio estático y se publica automáticamente en GitHub Pages m
 ## Antes de publicar
 
 1. Abre `script.js`.
-2. El formulario ya está configurado para enviar las solicitudes directamente a `arojas.sc1@gmail.com` mediante FormSubmit.
+2. El formulario ya está configurado para enviar las solicitudes directamente a `andres.rojas@kibotics.cl` mediante FormSubmit.
 3. Revisa el contenido y los enlaces de `index.html`.
 4. Comprueba que la URL canonical, `robots.txt` y `sitemap.xml` coincidan con el dominio publicado (`kibotics.cl`).
 

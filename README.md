@@ -32,7 +32,7 @@ python -m http.server 8000
 
 ## Formulario
 
-El formulario envía las solicitudes directamente mediante AJAX a `arojas.sc1@gmail.com` usando FormSubmit, sin abrir el cliente de correo del visitante.
+El formulario envía las solicitudes directamente mediante AJAX a `andres.rojas@kibotics.cl` usando FormSubmit, sin abrir el cliente de correo del visitante.
 
 FormSubmit puede solicitar una activación inicial del correo destinatario. Para un control más avanzado, puede sustituirse por Formspree, Netlify Forms o un backend propio.
 
