@@ -110,7 +110,7 @@ function App() {
     <div className="dashboard-shell">
       <header className="dashboard-header">
         <div className="brand-lockup">
-          <div className="app-mark"><LayoutDashboard size={19} /></div>
+          <img src="./assets/kibotics-icon.png" alt="kibotics" className="dashboard-logo-img" />
           <div><p className="overline">kibotics / Analytics</p><h1>Dashboard comercial</h1></div>
         </div>
         <div className="header-actions">

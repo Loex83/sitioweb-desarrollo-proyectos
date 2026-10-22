@@ -12,7 +12,16 @@
   <meta property="og:locale" content="es_CL">
   <meta name="theme-color" content="#0b1220">
   <link rel="canonical" href="https://kibotics.cl/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b1220'/%3E%3Ctext x='50' y='70' font-family='system-ui,-apple-system,sans-serif' font-size='60' font-weight='900' text-anchor='middle' fill='%2360a5fa'%3EK%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-192.png">
+  <meta property="og:image" content="https://kibotics.cl/assets/kibotics-banner.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="169">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="kibotics | Automatización, IA y datos para empresas">
+  <meta name="twitter:description" content="Automatizamos procesos, conectamos sistemas y convertimos datos en herramientas útiles para el negocio.">
+  <meta name="twitter:image" content="https://kibotics.cl/assets/kibotics-banner.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
   <title>kibotics | Automatización, IA, datos y software</title>
@@ -21,7 +30,7 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="kibotics inicio">
-        <span class="brand-mark">K</span>
+        <img class="brand-logo" src="assets/kibotics-icon.png" alt="Logo kibotics" width="38" height="38">
         <span>kibotics</span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
@@ -156,7 +165,15 @@
           </article>
           <article class="case-card">
             <div class="case-number">02</div>
-            <div class="case-body"><p class="case-type">Datos</p><h3>De Excel disperso a dashboard</h3><p>Consolidación de fuentes, limpieza, KPIs y visualización para que la información esté disponible sin preparar el reporte manualmente.</p><div class="case-flow"><span>Fuentes</span><b>→</b><span>ETL</span><b>→</b><span>KPIs</span><b>→</b><span>Dashboard</span></div></div>
+            <div class="case-body">
+              <p class="case-type">Datos & Automatización</p>
+              <h3>De fuentes dispersas a pipelines y dashboards</h3>
+              <p>Consolidación de fuentes (Cloud, bases de datos, APIs), limpieza automatizada, reglas y visualización en tiempo real sin preparar reportes manualmente.</p>
+              <div class="case-banner-box">
+                <img src="assets/kibotics-banner.png" alt="Arquitectura técnica de pipeline de datos, automatización y visualización kibotics" class="case-banner-img" loading="lazy">
+              </div>
+              <div class="case-flow"><span>Fuentes (Cloud / BD / API)</span><b>→</b><span>Pipeline ETL</span><b>→</b><span>Base procesada</span><b>→</b><span>Alertas & Dashboard</span></div>
+            </div>
           </article>
           <article class="case-card">
             <div class="case-number">03</div>
@@ -188,7 +205,9 @@
 
     <section class="section about-section" id="sobre">
       <div class="container about-grid">
-        <div class="about-avatar">K</div>
+        <div class="about-avatar" aria-label="Logo kibotics">
+          <img src="assets/kibotics-logo.png" alt="Logo oficial kibotics.cl" class="about-avatar-img">
+        </div>
         <div>
           <p class="section-kicker">Sobre kibotics</p>
           <h2>Especialización técnica sin la burocracia de una gran consultora.</h2>
@@ -232,7 +251,7 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="#inicio"><span class="brand-mark">K</span><span>kibotics</span></a><p>Automatización, IA, datos y software para empresas.</p></div>
+      <div><a class="brand footer-brand" href="#inicio"><img class="brand-logo" src="assets/kibotics-icon.png" alt="Logo kibotics" width="38" height="38"><span>kibotics</span></a><p>Automatización, IA, datos y software para empresas.</p></div>
       <div class="footer-links"><a href="#soluciones">Soluciones</a><a href="#casos">Casos</a><a href="#diagnostico">Diagnóstico</a></div>
     </div>
     <div class="container footer-bottom"><span>© <span id="year"></span> kibotics</span><span>Santiago, Chile</span></div>

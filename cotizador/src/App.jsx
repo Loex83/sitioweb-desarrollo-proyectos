@@ -75,7 +75,7 @@ function App() {
     <div className="quote-app">
       <header className="quote-header">
         <a className="back-home" href="../../index.html"><ArrowLeft size={16} /> Volver al sitio</a>
-        <div className="quote-brand"><span className="brand-symbol">K</span><span>kibotics <small>cotizador comercial</small></span></div>
+        <div className="quote-brand"><img src="./assets/kibotics-icon.png" alt="kibotics" className="quote-brand-logo" /><span>kibotics <small>cotizador comercial</small></span></div>
         <div className="quote-number"><span>Cotización</span><strong>{quoteNumber}</strong></div>
       </header>
 
